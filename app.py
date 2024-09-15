@@ -35,6 +35,11 @@ def plot_confidence_score(confidence_score):
     plt.close()
     return image_path
 
+@app.route('/', methods=['GET'])
+def welcome():
+    return 'Welcome to Symptom AI'
+
+
 @app.route('/diagnose', methods=['POST'])
 def diagnose():
     data = request.json
